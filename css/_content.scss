@@ -1,0 +1,95 @@
+.main-content {
+    padding: 50px 0 20px 0;
+
+    @include largeMobile {
+        padding: 25px 0 120px 0;
+    }
+
+    .main-container {
+        @include mainContainer2;
+        text-align: center;
+        margin-bottom: 80px;
+
+        @include largeMobile {
+            @include mobileContainer2;
+        }
+
+        .main-img {
+            max-width: 100%;
+        }
+    }
+}
+
+footer {
+
+    .main-container {
+        @include mainContainer2;
+        text-align: center;
+        margin-bottom: 30px;
+
+        @include largeMobile {
+            @include mobileContainer2;
+        }
+
+        .icon-div {
+            @include flexSpaceBetween;
+            width: 18%;
+            margin: $centerContainer;
+            //border: $buildBorder;
+
+            @include largeTablet {
+                width: 22%;
+            }
+
+            @include tablet {
+                width: 25%;
+            }
+
+            @include largeMobile {
+                width: 18%;
+            }
+
+            @include mobile {
+                width: 22%;
+            }
+
+            @include standardMobile {
+                width: 26%;
+            }
+
+            @include fold {
+                width: 35%;
+            }
+
+            @include large {
+                width: 15%;
+            }
+
+            a {
+
+                i {
+                    color: rgb(86, 86, 244);
+                    //border: $buildBorder;
+                }
+            }
+        }
+
+        .footer-p {
+            font-family: $mainFont;
+            font-size: 12px;
+            color: $mainH1Color;
+            font-weight: $light; 
+            margin-top: 30px;
+            //border: $buildBorder;
+
+            @include mobile {
+                font-size: 8px;
+            }
+
+            @include large {
+                font-size: 15px;
+                margin-top: 40px;
+            }
+        }
+    }
+}

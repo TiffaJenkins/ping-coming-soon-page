@@ -1,0 +1,110 @@
+//----------------------------------Main variables-------------------------------
+//-------------------------------------------------------------------------------
+$buildBorder: 1px solid red;
+$mainFont: 'Libre Franklin', sans-serif;
+$mainH1Color: hsl(0, 0%, 59%);
+$altH1Color: hsl(209, 33%, 12%);
+$mainPColor: hsl(209, 33%, 12%);
+$mainButtonColor: hsl(223, 87%, 63%);
+$inputColor: hsl(223, 100%, 88%);
+$errorText: hsl(354, 100%, 66%);
+$centerContainer: 0 auto;
+$getRid: none;
+$light: 300;
+$reg: 400;
+$bold: 600;
+$extraBold: 700;
+
+//-----------------------------------Containers----------------------------------
+//-------------------------------------------------------------------------------
+@mixin mainContainer {
+    width: 60%;
+    margin: $centerContainer;
+    //border: $buildBorder;
+}
+
+@mixin mainContainer2 {
+    width: 50%;
+    margin: $centerContainer;
+    //border: $buildBorder;
+}
+
+@mixin mobileContainer {
+    width: 80%;
+    margin: $centerContainer;
+    //border: $buildBorder;
+}
+
+@mixin mobileContainer2 {
+    width: 90%;
+    margin: $centerContainer;
+    //border: $buildBorder;
+}
+
+//--------------------------------------flex--------------------------------------
+//--------------------------------------------------------------------------------
+@mixin flexSpaceBetween {
+    display: flex;
+    justify-content: space-between;
+}
+
+@mixin flexJustifyCenter {
+    display: flex;
+    justify-content: center;
+}
+
+@mixin flexAllCenter {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+//-------------------------------Responsive mixins--------------------------------
+//--------------------------------------------------------------------------------
+@mixin fold {
+    @media (max-width: 342px) {
+        @content;
+    }
+}
+
+@mixin standardMobile {
+    @media (max-width: 436px) {
+        @content;
+    }
+}
+
+@mixin mobile {
+    @media (max-width: 507px) {
+        @content;
+    }
+}
+
+@mixin largeMobile {
+    @media (max-width: 675px) {
+        @content;
+    }
+}
+
+@mixin tablet {
+    @media (max-width: 820px) {
+        @content;
+    }
+}
+
+@mixin largeTablet {
+    @media (max-width: 1000px) {
+        @content;
+    }
+}
+
+@mixin laptop {
+    @media (max-width: 1329px) {
+        @content;
+    }
+}
+
+@mixin large {
+    @media (min-width: 1330px) {
+        @content;
+    }
+}
